@@ -1,0 +1,6 @@
+该工程是 rocketmq+spring demo工程
+1、实例化producer 和 consumer 都在spring-config-rocketmq.xml中
+2、本工程是模拟请求然后将请求的业务数据交给producer处理，放入rocketmq中，入口类 RocketAction
+3、在实例化consumer时，base Class 就一个 MyConsumer.java 
+  根据在spring-config-rocketmq.xml 配置不同的入参 实例化出不同的consumer（其实主要是不同的RocketMqMessageListener），
+  根据rocketmq.properties中配置的不同的入参和不同的RocketMqMessageListener的实现类，可以实例化出监听不同topic和不同subExpression的consumer
